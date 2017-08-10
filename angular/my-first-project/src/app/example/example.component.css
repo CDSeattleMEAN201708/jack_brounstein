@@ -1,0 +1,7 @@
+li {
+	background-color: black;
+	color: red;
+	border: 10px dashed darkred;
+	margin: 5px;
+	padding: 5px;
+}
