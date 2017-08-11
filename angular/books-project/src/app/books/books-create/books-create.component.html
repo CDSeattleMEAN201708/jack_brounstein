@@ -1,0 +1,6 @@
+<h1>Add Book</h1>
+<form (submit)="create_book()">
+	<p>Title: <input type="text" [(ngModel)]="new_book.title" name="title"></p>
+	<p>Author: <input type="text" [(ngModel)]="new_book.author" name="author"></p>
+	<input type="submit" value="Create Book">
+</form>
