@@ -1,3 +1,4 @@
 <h1>BOOKS</h1>
-<app-books-detail *ngFor="let book of books" [this_book]="book"></app-books-detail>
+<p><input type="text" name="search" [(ngModel)]="search" placeholder="Filter list..."> </p>
+<app-books-detail *ngFor="let book of books | filter:search" [this_book]="book"></app-books-detail>
 <app-books-create (create_book_event)="create_book($event)"></app-books-create>
