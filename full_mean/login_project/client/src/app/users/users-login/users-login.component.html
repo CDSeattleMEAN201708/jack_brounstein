@@ -1,0 +1,5 @@
+<h3>Log In</h3>
+<form (submit)="create_user()" #new_user_form="ngForm">
+	<p>Name: <input type="text" name="name" [(ngModel)]="user.name" required minlength="2" maxlength="10" #user_name="ngModel" > <span *ngIf="!user_name.valid">User name is required and must be at least 2 characters long</span> </p>
+	<input type="submit" value="Log In" [disabled]="!new_user_form.valid">
+</form>
