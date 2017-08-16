@@ -23,24 +23,24 @@ Navigate to the folder where your .pem file is!
 
 (you can use the 'connect' button on Amazon AWS to get the next line of code) // ssh -i "pem-friends.pem" ubuntu@ec2-54-202-98-79.us-west-2.compute.amazonaws.com
 
-In the ubuntu terminal: These establish some basic dependencies for deployment and the Linux server.
+From here on out, everything will be in the ubuntu terminal: These establish some basic dependencies for deployment and the Linux server.
 
 	sudo apt-get update
 	sudo apt-get install -y build-essential openssl libssl-dev pkg-config
 
 	sudo apt-get install -y nodejs    // if the first doesnt work use:  sudo apt-get install -y nodejs-legacy
 
-	sudo apt-get install npm
+	sudo apt-get install -y npm
 	sudo npm cache clean -f
 
-In the ubuntu terminal: These install the node package manager n and updated node.
+These install the node package manager n and updated node.
 
 	sudo npm install -g n
 	sudo n stable
 
 Install NGINX and git:
 
-	sudo apt-get install nginx
+	sudo apt-get install -y nginx
 	sudo apt-get install git
 
 Enter main folder:
@@ -52,7 +52,7 @@ Clone the project:
 	sudo git clone {{project file path on github}}
 
 Set up NGINX
-Go to nginx’s sites-available directory :
+Go to nginx's sites-available directory :
 
 	cd /etc/nginx/sites-available
 
